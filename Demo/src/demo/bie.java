@@ -16,7 +16,7 @@ public class bie {
 	        driver.get(url);
 	        
 	        
-	        Cookie c1 = new Cookie("PLAY_SESSION","3b91ce4d4a87ce5de09f9a3d1aa1389827b73ec5-_user_session=90f70a85889c3a4808084d375773be07");    
+	        Cookie c1 = new Cookie("PLAY_SESSION","3b91ce4d4a87ce5de09f9a3d1aa1389827b73ec5-_user_session=90f70a85889c3a4808084d375773be07");  //保存cookie  
 	        driver.manage().addCookie(c1);
 	        
 //	        System.out.println(driver.manage().getCookies());
