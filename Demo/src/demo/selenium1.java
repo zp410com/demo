@@ -35,7 +35,7 @@ public class selenium1 {
 		driver.findElement(By.xpath("//*[@id=\"signup-form\"]/div[1]/input")).sendKeys("18844996590");
 		driver.findElement(By.xpath("//*[@id=\"signup-form\"]/div[2]/input")).sendKeys("19951108ZXZzxz");
 		driver.findElement(By.xpath("//*[@id=\"signup-form\"]/div[5]/input")).click();
-		threadSleep(3000);
+		threadSleep(3000); //source tree
 
 	}
 
