@@ -70,7 +70,7 @@ public class selenium1 {
 
 	}
 
-	// 上传文件
+	// 上传文件  拉取代码
 	public void upFile() {
 		driver.get("https://www.imooc.com/user/setbindsns");
 		threadSleep(5000);
