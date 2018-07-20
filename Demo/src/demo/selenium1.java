@@ -49,7 +49,7 @@ public class selenium1 {
 			boolean flag = radio.isSelected();
 			if (flag == false) {
 				radio.click();
-				System.out.println("");
+//				System.out.println("");
 				break;
 			}
 			System.out.println("nnnnn");
@@ -70,7 +70,7 @@ public class selenium1 {
 
 	}
 
-	// 上传文件  上传代码
+	// 上传文件
 	public void upFile() {
 		driver.get("https://www.imooc.com/user/setbindsns");
 		threadSleep(5000);
