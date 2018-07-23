@@ -100,9 +100,21 @@ public class selenium1 {
         WebElement element = driver.findElement(By.id("profile")).findElement(By.id("job"));    //层级定位
         Select downList = new Select(element);
 
-//        downList.selectByIndex(2);    //通过索引
+//        downList.selectByIndex(4);    //通过索引
 //        downList.selectByValue("1");    //通过value
-        downList.selectByVisibleText("Web前端工程师");   //通过可见文本
+//        downList.selectByVisibleText("Web前端工程师");   //通过可见文本】
+
+//        System.out.println(downList.isMultiple());    //判断是否为多选的下拉列表
+//        downList.deselectByIndex(3);  //只能取消多选的下拉列表，单选无法去除
+
+//        List<WebElement> list = downList.getAllSelectedOptions();  //getAllSelectedOptions针对多选列表
+//        for (WebElement listIndex : list
+//                ) {
+//
+//            System.out.println(listIndex.getText());
+//
+//        }
+//        downList.getFirstSelectedOption().getText();    //当前选择的选项
 
     }
 
@@ -116,7 +128,7 @@ public class selenium1 {
         sele.initLogin();
         sele.selectBox();
 //        sele.upFile();
-//		sele.radioBox();
+//		  sele.radioBox();
 
     }
 
