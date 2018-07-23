@@ -7,6 +7,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 
@@ -118,15 +120,37 @@ public class selenium1 {
 
     }
 
+    /**
+     *鼠标事件
+     */
+
+    public void mouseAction(){
+        WebElement element  = driver.findElement(By.xpath("//*[@id=\"main\"]/div[2]/div/div[9]/div[1]/a"));
+
+        Actions actions = new Actions(driver);
+//        actions.click(element).perform();   //模拟鼠标点击
+
+//        actions.doubleClick(element).perform(); //双击
+//        threadSleep(1000);
+//        actions.contextClick(element).perform();  //右击
+
+        actions.moveToElement(element).perform();   //鼠标悬停
+        driver.findElement(By.linkText("区块链")).click(); 
+
+
+    }
+
     public static void main(String[] args) {
 
         selenium1 sele = new selenium1();
         sele.init();
 
-//		sele.checkBox();
+        sele.mouseAction();
 
-        sele.initLogin();
-        sele.selectBox();
+//		  sele.checkBox();
+
+//        sele.initLogin();
+//        sele.selectBox();
 //        sele.upFile();
 //		  sele.radioBox();
 
