@@ -2,6 +2,7 @@ package demo;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +11,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class selenium1 {
@@ -162,15 +166,15 @@ public class selenium1 {
      * 窗口切换
      */
 
-    public void windowsHandle(){
+    public void windowsHandle() {
         //获取到所有的窗口
-        Set<String> handles =driver.getWindowHandles();
-        for (String s: handles) {
+        Set<String> handles = driver.getWindowHandles();
+        for (String s : handles) {
 
-            if (s.equals(windowshandles)){
+            if (s.equals(windowshandles)) {
                 //等于当前窗口继续循环，否则跳出循环(等同于else)
 //                continue;
-            }else{
+            } else {
                 driver.switchTo().window(s);
             }
 
@@ -178,6 +182,19 @@ public class selenium1 {
         //点击"中级"
         driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div/div[2]/div/div[3]/div/ul/li[4]/a")).click();
 
+    }
+
+    /**
+     * 等待
+     */
+
+    public void waitforElement() {
+        //隐式等待
+        //driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+
+        //显式等待
+        new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("test")));
     }
 
     public static void main(String[] args) {
